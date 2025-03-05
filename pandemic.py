@@ -4,27 +4,10 @@ import numpy as np
 import pygame
 import random
 
+from config import WIDTH, HEIGHT, COLOR_DEFINITIONS, COLORS, PANDEMIC_PARAMETERS
+
 pygame.init()
-
-WIDTH = 600
-HEIGHT = 400
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
-
-COLOR_DEFINITIONS = {
-    "grey": (35, 35, 40),
-    "light_grey": (70, 70, 90),
-    "white": (255, 248, 240),
-    "red": (239, 71, 111),
-    "blue": (17, 138, 178)
-}
-
-COLORS = {
-    "background": COLOR_DEFINITIONS["grey"],
-    "healthy": COLOR_DEFINITIONS["white"],
-    "infected": COLOR_DEFINITIONS["red"],
-    "immune": COLOR_DEFINITIONS["blue"],
-    "dead": COLOR_DEFINITIONS["grey"],
-}
 
 
 class Cell:
@@ -219,7 +202,7 @@ class Pandemic:
         pyplot.show()
 
 
-pandemic = Pandemic()
+pandemic = Pandemic(**PANDEMIC_PARAMETERS)
 
 # pygame loop
 clock = pygame.time.Clock()
