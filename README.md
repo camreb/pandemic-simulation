@@ -3,6 +3,8 @@
 ## Project Description
 Pandemic simulation is credit project in my studies, created in Python using the Pygame library. The program simulates the spread of a disease within a population, taking into account various parameters such as infection probability, incubation period and more.
 
+![Simulation Preview](assets/pandemic.gif)
+
 ## Requirements
 To run the program, you need to have the following installed:
 - Python 3.10
